@@ -1,1 +1,1 @@
-c:\\bin\lcc -o gma.gb main.c
+c:\\gbdk\bin\lcc -o gma.gb main.c
