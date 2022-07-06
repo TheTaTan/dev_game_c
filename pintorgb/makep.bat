@@ -1,1 +1,1 @@
-c:\\gbdk\bin\lcc -o pintor.gb mainp.c
+c:\\gbdk\bin\lcc -o pt.gb mainp.c
