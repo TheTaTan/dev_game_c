@@ -2,8 +2,10 @@
 #include <gb/gb.h>
 #include <gb/drawing.h>
 
-unasingned char x = 0;
-unasingned char y = 0;
+unsigned char cl = 0;
+
+unsigned char x = 0;
+unsigned char y = 0;
 
 void main(){
   While(1){
