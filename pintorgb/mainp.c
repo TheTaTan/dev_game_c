@@ -1,5 +1,6 @@
-#include <gb/gb.h>
 #include <stdio.h>
+#include <gb/gb.h>
+#include <gb/drawing.h>
 
 unasingned char x = 0;
 unasingned char y = 0;
