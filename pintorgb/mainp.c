@@ -11,7 +11,6 @@ unsigned char y = 0;
 void main(){
   While(1){
     //otras funciones
-    delay(35);
     if (val == -1) {val++;}
     if (val == 0) {cl = WHITE;}
     if (val == 1) {cl = LTGRAY;}
@@ -33,6 +32,10 @@ void main(){
     if (joypad() == j_UP + j_LEFT) {x--;y++;}
     if (joypad() == j_DOWN + j_RIGTH) {y--;x++;}
     if (joypad() == j_DOWN + J_LEFT) {y--;x--;}
+    
+    //retraso de FPS
+    delay(35);
+  return(0);
   }
 
 }
