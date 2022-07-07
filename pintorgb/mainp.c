@@ -2,22 +2,30 @@
 #include <gb/gb.h>
 #include <gb/drawing.h>
 
-unsigned char val = 0;
+#include "sprites/pencils.c"
+
+unsigned char val = 3;
 unsigned char cl;
 
 unsigned char x = 0;
 unsigned char y = 0;
 
 int main() {
+
+  set_sprite_data(0, 4, pencils);
+  set_sprite_tile(0, val);
+
   while(1) {
     //otras funciones
 
+    SHOW_SPRITES;
+
     switch (val) {
       case -1: val = 0; break;
-      case 0: cl = WHITE; break;
-      case 1: cl = LTGREY; break;
-      case 2: cl = DKGREY; break;
-      case 3: cl = BLACK; break;
+      case 0: cl = WHITE; set_sprite_tile(0, val); break;
+      case 1: cl = LTGREY; set_sprite_tile(0, val); break;
+      case 2: cl = DKGREY; set_sprite_tile(0, val);  break;
+      case 3: cl = BLACK; set_sprite_tile(0, val); break;
       case 4: val = 3; break;
     }
 
@@ -37,6 +45,7 @@ int main() {
     if (joypad() == J_DOWN + J_LEFT) {x--;y++;}
 
     //sprites
+    move_sprite(0, x, y);
     
     //retraso de FPS
     delay(1000);
