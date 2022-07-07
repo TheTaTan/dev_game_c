@@ -35,9 +35,11 @@ int main() {
     if (joypad() == J_UP + J_LEFT) {x--;y--;}
     if (joypad() == J_DOWN + J_RIGHT) {x++;y++;}
     if (joypad() == J_DOWN + J_LEFT) {x--;y++;}
+
+    //sprites
     
     //retraso de FPS
-    delay(35);
+    delay(1000);
   }
   return(0);
 }
