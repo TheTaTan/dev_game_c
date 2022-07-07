@@ -11,13 +11,16 @@ unsigned char y = 0;
 int main() {
   while(1) {
     //otras funciones
-    if (val <= -1) {val = 0;}
-    if (val == 0) {cl = WHITE;}
-    if (val == 1) {cl = LTGREY;}
-    if (val == 2) {cl = DKGREY;}
-    if (val == 3) {cl = BLACK;}
-    if (val >= 4) {val = 3;}
-    
+
+    switch (val) {
+      case -1: val = 0; break;
+      case 0: cl = WHITE; break;
+      case 1: cl = LTGREY; break;
+      case 2: cl = DKGREY; break;
+      case 3: cl = BLACK; break;
+      case 4: val = 3; break;
+    }
+
     //controles
     if (joypad() == J_UP) {y--;}
     if (joypad() == J_DOWN) {y++;}
