@@ -10,11 +10,13 @@
 
 #include "sprites/titlet.c"
 #include "bg/title.c"
+#include "sprites/ins.c"
+#include "bg/inns.c"
 
-#define GRAPHICS_WIDTH	80
-#define GRAPHICS_HEIGHT 72
+#define GRAPHICS_WIDTH	40
+#define GRAPHICS_HEIGHT 36
 
-char val = 2;
+char val = 1;
 char cl;
 
 unsigned char x = 0;
@@ -57,6 +59,14 @@ int main() {
 
   set_bkg_data(0, 28, tile_title);
   set_bkg_tiles(0, 0, 20, 18, tile_title_gb);
+
+  SHOW_BKG;
+  waitpad(J_START);
+  HIDE_BKG;
+
+  set_bkg_data(0, 62, tile_i_gb);
+  set_bkg_tiles(0, 0, 20, 18, ins_bg);
+
   SHOW_BKG;
   waitpad(J_START);
   HIDE_BKG;
